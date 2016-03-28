@@ -9,11 +9,11 @@
                   <%= image_tag("headless_horseman.jpg", class: "headless img-circle") %>
                   <li id="name"><%= @post.author %></li>
                   <li id="on">on</li>
-                  <li id="date"><%= @post.created_at.strftime("%A %h %d %T") %> @</li>
+                  <li id="date"><%= @post.created_at.strftime("%A %h %d %T") %></li>
                 </ul>
               </div>
                 <div class="fp">
-                  <p><%= @post.body %></p>
+                  <p><%= simple_format(@post.body) %></p>
                 </div>
               <div class="text-left choices">
                 <a href="#"><span class="glyphicon glyphicon-comment"></span>Read Comments</a>
@@ -27,7 +27,7 @@
               <div id="headless2" class="">
                 <%= image_tag("headless_horseman.jpg", class: "headless2 img-circle") %>
               </div>
-              <h4 class="name2 text-center">Anne Marie</h4>
+              <h4 class="name2 text-center"><%= @post.author %></h4>
               <ul class="links">
                 <li id="twitter"><a href="#">Twitter</a></li>
                 <li id="facebook"><a href="#">Facebook</a></li>
@@ -46,27 +46,20 @@
         </div>
       </div>
     </main>
-    <div class="post-title">
-      <div class="container">
-        <div class="row text-center">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
             <h1 id="popular">MOST POPULAR POSTS</h1>
         </div>
+        <section class="col-m-3 image-links">
+          <% @posts.each do |post| %>
+              <div class="image<%= post.id %>">
+                <%= link_to post.title, post_path(id: post.id) %>
+              </div>
+              <% end %>
+            </section>
+        </div>
       </div>
-    </div>
-    <section class="image-links">
-      <div class="image1">
-        <a href="#">PLACE TO LIVE FOR</a>
-      </div>
-      <div class="image2">
-        <a href="#">PLACE TO LIVE FOR</a>
-      </div>
-      <div class="image3">
-        <a href="#">SOME TEXT HERE</a>
-      </div>
-      <div class="image4">
-        <a href="#">MORE TEXT HERE</a>
-      </div>
-    </section>
   </body>
 </html>
 

@@ -24,7 +24,7 @@ nav::before {
   height: 100%;
   opacity: .3;
   z-index: -1;
-  background-image: url(http://i1-news.softpedia-static.com/images/news2/Global-Warming-Threatens-to-Turns-Oceans-into-Major-Carbon-Emitters-445805-2.jpg);
+  background-image: url(image_path('global.jpg'));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -267,18 +267,12 @@ footer ul li:first-child{
   background-image: url(image_path('sandy.jpeg'));
   z-index: 1;
   position: relative;
-  padding: 0px;
-  margin: 0px;
-  font-size: 0px;
 }
 
 .image2 {
-  background-image: url(image_path('casstle.jpeg'));
+  background-image: url(image_path('castle.jpeg'));
   z-index: 1;
   position: relative;
-  padding: 0px;
-  margin: 0px;
-  font-size: 0px;
 }
 
 .image3 {
@@ -289,6 +283,12 @@ footer ul li:first-child{
 
 .image4 {
   background-image: url(image_path('forest.jpeg'));
+  z-index: 1;
+  position: relative;
+}
+
+.image5 {
+  background-image: url(image_path('mountain.jpeg'));
   z-index: 1;
   position: relative;
 }
