@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surfnpaddlerails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <nav>
+    <div class="blue_box">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img class="logo" src= "<%= asset_path ('logo-surf-and-paddle.svg') %>" alt="Logo to use" />
+            <span class="logo-text">SURF AND PADDLE CO. BLOG</span>
+          </div>
+          <div class="col-sm-6 text-right">
+            <ul>
+              <li>ABOUT</li>
+              <li>SEARCH</li>
+              <li><img class="icon" src="<%= asset_path ('icon-search.png') %>" alt="Search icon" /></li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <h1 class="surf-text">SURF & PADDLE CO.</h1>
+          </div>
+          <div class="text-center">
+            <h2 class="ironyard-text">An Ironyard Academy Project Est. Fall 2013</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<%= yield %>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="finish-logo col-md-6">
+            <img class="iron" src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/47/s300/the-iron-yard-logo.png" alt="yard" />
+            <span class="finish">The Ironyard Copyright 2013, All Rights Reserved</span>
+          </div>
+          <div class="col-md-6">
+            <ul class="closing_links text-right">
+              <li><a href="#">Nav Item 1</a></li>
+              <li><a href="#">Nav Item 2</a></li>
+              <li><a href="#">Nav Item 3</a></li>
+              <li><a href="#">Nav Item 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>

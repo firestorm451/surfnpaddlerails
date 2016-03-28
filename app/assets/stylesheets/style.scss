@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+nav {
+  background-color: #1B6AAC;
+  width: 100%;
+  height: 400px;
+  padding: 0px;
+  position:relative;
+  z-index: 1;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  z-index: -1;
+  background-image: url(http://i1-news.softpedia-static.com/images/news2/Global-Warming-Threatens-to-Turns-Oceans-into-Major-Carbon-Emitters-445805-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav h1 {
+  color: white;
+  font-size: 80px;
+  margin-top: 100px;
+  padding: 0px;
+}
+
+nav h2 {
+  font-size: 12px;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+main h1 {
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+main ul li {
+  display: inline-block;
+}
+
+main p {
+  text-align: left;
+  margin-top: 10px;
+}
+
+main h2 {
+  color: #24699E;
+  margin-left: 40px;
+  padding: 10px;
+}
+
+footer {
+  background-color: #083451;
+  color: white;
+  height: 100px;
+}
+
+footer ul li{
+  display: inline-block;
+  color: white;
+  border-left: 1px solid white;
+  margin: 40px 5px 0 0;
+  padding-left: 8px;
+}
+
+footer ul li:first-child{
+  border-left: none;
+}
+
+.blue_box {
+  padding: 20px;
+}
+
+.blue_box ul {
+  margin-top: 10px;
+}
+
+.logo {
+  max-width: 40px;
+  min-width: 20px;
+}
+
+.icon {
+  max-width: 20px;
+  min-width: 10px;
+}
+
+.headless {
+  width: 3vw;
+  height: 3vw;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.headless2 {
+  width: 6vw;
+  height: 6vw;
+  min-width: 40px;
+  min-height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.evil_ad {
+  width: 20vw;
+  height: 12vw;
+  min-width: 50px;
+  min-height: 30px;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  background-size: cover;
+  background-image: url(image_path('spooky.jpeg'));
+  background-position: center center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    transition: opacity 0.5sec ease;
+    z-index: -1;
+    background-color: #1B6AAC;
+  }
+  &:hover {
+    opacity: .8;
+  }
+}
+
+
+
+.name2 {
+  color: #5E8FB5;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.about_ad {
+  text-decoration: underline;
+  color: #CCCED2;
+  margin-top: 5px;
+  transition: opacity 0.5sec ease;
+}
+
+.about_ad:hover {
+  opacity: .6
+}
+
+.read-comments {
+  max-width: 20px;
+  min-width: 10px;
+  background-color: white;
+  margin: 10px;
+}
+
+.share-post {
+  max-width: 20px;
+  min-width: 10px;
+  background-color: black;
+  margin: 10px;
+}
+
+.imp-title {
+  border-left: 2px solid gray;
+}
+
+.choices {
+  padding-top: 20px;
+
+  span {
+    vertical-align: top;
+    display: inline-block;
+    padding: 5px;
+    background: #5D686E;
+    margin-right: 10px;
+    background-size: contain;
+    background-size: 100%;
+    margin-top: -3px;
+  }
+
+  a {
+    padding-top: 3px;
+    display: inline-block;
+    color: white;
+    background: #A1B1C1;
+    width: 150px;
+    margin-right: 20px;
+    height: 26px;
+  }
+
+  a:last-child {
+    background: #0F6CB2
+  }
+}
+
+.image-links {
+  font-size: 0;
+  a {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  bottom: 0px;
+  padding: 10px;
+  }
+
+  div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    transition: opacity 0.5sec ease;
+    z-index: -1;
+    background-color: #1B6AAC;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.image-links > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: inline-block;
+  width: calc(1/4 * 100%);
+  height: calc(1/4 * 100vw);
+  overflow: hidden;
+  position: relative;
+  font-size: 0px;
+  margin: 0px;
+  padding: 0px;
+  /*border: 1px solid red;*/
+}
+
+.image-links > div:hover {
+  opacity: 0.8;
+}
+
+.image1 {
+  background-image: url(image_path('sandy.jpeg'));
+  z-index: 1;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  font-size: 0px;
+}
+
+.image2 {
+  background-image: url(image_path('casstle.jpeg'));
+  z-index: 1;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  font-size: 0px;
+}
+
+.image3 {
+  background-image: url(image_path('water.jpeg'));
+  z-index: 1;
+  position: relative;
+}
+
+.image4 {
+  background-image: url(image_path('forest.jpeg'));
+  z-index: 1;
+  position: relative;
+}
+
+.finish-logo {
+  margin-top: 30px;
+}
+
+.iron {
+  max-width: 40px;
+  min-width: 20px;
+  margin-left: 50px;
+  background-color: #083451;
+  /*margin-top: 50px;*/
+}
+
+.finish {
+  color: white;
+}
+
+.closing-links a, a:link, a:active, a:visited {
+  color: white !important;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+#blog {
+  text-align: left;
+}
+
+#name {
+  color: #5E8FB5;
+  padding: 10px;
+}
+
+#on {
+  color: #CCCED2;
+}
+
+#date {
+  text-decoration: underline;
+  color: #CCCED2;
+}
+#second {
+  margin-right: 30px;
+}
+
+#third {
+  background: #053250
+}
+
+#first-paragraph {
+  margin-top: 40px;
+}
+
+#second-paragraph {
+  padding-top: 30px;
+}
+
+#headless2 {
+  margin-top: 60px;
+}
+
+#twitter a {
+  color: #CCCED2 !important;
+  font-size: 10px;
+  margin: 0 auto;
+  transition: font-size .05s ease;
+
+  &:hover{
+  font-size: 15px;
+}
+}
+
+#facebook a {
+  color: #CCCED2 !important;
+  font-size: 10px;
+  margin: 0 auto;
+  margin-left: 10px;
+  transition: font-size .05s ease;
+
+  &:hover{
+  font-size: 15px;
+}
+}
+
+#instagram a {
+  color: #CCCED2 !important;
+  font-size: 10px;
+  margin: 0 auto;
+  margin-left: 10px;
+  transition: font-size .05s ease;
+
+  &:hover{
+  font-size: 15px;
+}
+}
+
+#sidebar {
+  color: #1869A6;
+  margin-top: 50px;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+#popular {
+  font-size: 5vw;
+  margin-top: 80px;
+  border-top: 1px solid #CCCED2;
+  padding-top: 15px;
+}
+
+
+@media screen and (max-width: 760px) {
+  .logo-text {
+    font-size: 10px;
+  }
+  .surf-text {
+    font-size: 30px;
+  }
+  .ironyard-text {
+    font-size: 10px;
+  }
+  .headline-text {
+    font-size: 30px;
+  }
+  footer ul li  {
+    font-size: 10px;
+  }
+  .finish {
+    font-size: 8px;
+  }
+  .image-links a {
+    font-size: 15px;
+  }
+}
