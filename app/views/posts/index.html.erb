@@ -7,7 +7,7 @@
               <div class="text-left">
                 <ul>
                   <%= image_tag("headless_horseman.jpg", class: "headless img-circle") %>
-                  <li id="name"><%= @post.author %></li>
+                  <li id="name"><%= @post.author.name %></li>
                   <li id="on">on</li>
                   <li id="date"><%= @post.created_at.strftime("%A %h %d %T") %></li>
                 </ul>
@@ -27,7 +27,7 @@
               <div id="headless2" class="">
                 <%= image_tag("headless_horseman.jpg", class: "headless2 img-circle") %>
               </div>
-              <h4 class="name2 text-center"><%= @post.author %></h4>
+              <h4 class="name2 text-center"><%= @post.author.name %></h4>
               <ul class="links">
                 <li id="twitter"><a href="#">Twitter</a></li>
                 <li id="facebook"><a href="#">Facebook</a></li>

@@ -1,0 +1,12 @@
+<div class="form-group">
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+</div>
+<div>
+  <%= form.label :body %>
+  <%= form.text_area :body, rows: 10 %>
+</div>
+<div>
+  <%= form.label :author %>
+  <%= form.select :author_id, Author.all.map { |aur| [aur.name, aur.id] }, include_blank: "None" %>
+</div>

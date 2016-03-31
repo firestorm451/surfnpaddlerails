@@ -1,0 +1,16 @@
+<% if @post.errors %>
+
+  <ul class = "errors">
+    <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+
+<%= form_for @post do |f| %>
+   <%= render partial: 'form', :locals => {form: f} %>
+   <div>
+     <%= f.submit "Create Post" %>
+   </div>
+ <% end %>
